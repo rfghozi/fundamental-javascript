@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <title>Add and Remove</title>
+    <script type="text/javascript" src="jquery-3.5.1.min.js"></script>
+
+    <style>
+        .boxHijau{
+            background: green;
+            color: white;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <button class="tambah_class">Tambah Class</button>
+    <button class="hilangkan_class">Hilangkan Class</button>
+
+    <div class="box">Ini adalah element yang akan ditambahkan atau dihapus classnya</div>
+
+    <script type="text/javascript">
+
+        $(document).ready(function(){
+            $(".tambah_class").click(function(){
+                $(".box").addClass("boxHijau");
+            })
+
+            $(".hilangkan_class").click(function(){
+                $(".box").removeClass("boxHijau");
+            })
+        });
+
+    </script>
+    
+</body>
+</html>

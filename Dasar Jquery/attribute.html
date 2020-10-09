@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <title>Tambah Attribut</title>
+    <script src="jquery-3.5.1.min.js"></script>
+
+    <style>
+        #boxHijau{
+            background: green;
+            color: white;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <button class="tambah_attribut">Tambah Attribut</button>
+    <button class="hilangkan_attribut">Hilangkan Attribut</button>
+    <button class="dapatkan_nilai">Dapatkan Nilai</button>
+
+    <div class="box">Ini adalah tempat dimana atribut akan dimanipulasi</div>
+
+    <script type="text/javascript">
+        $(document).ready(function(){
+            $(".tambah_attribut").click(function(){
+                $(".box").attr("id", "boxHijau");
+            });
+
+            $(".hilangkan_attribut").click(function(){
+                $(".box").removeAttr("id");
+            });
+
+            $(".dapatkan_nilai").click(function(){
+                var nilaiId = $(".box").attr("id");
+                alert(nilaiId);
+            });
+        });
+
+    </script>
+    
+</body>
+</html>

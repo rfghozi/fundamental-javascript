@@ -1,0 +1,22 @@
+<!-- Dom ini dapat digunakan untuk mengisi suatu elemen atau mengambil nilai suatu elemen -->
+<!DOCTYPE html>
+<html lang="en">
+<head> 
+    <script type="text/javascript" src="jquery-3.5.1.min.js"></script>
+    <title>HTML</title>
+</head>
+
+<body>
+
+    <div id="isiText">Ini adalah isi dari action HTML - INI AKAN DIAMBIL NILAINYA</div>
+
+    <script type="text/javascript">
+        $(document).ready(function(){
+            var x = $("#isiText").html();
+            alert(x)
+        });
+
+    </script>
+
+</body>
+</html>

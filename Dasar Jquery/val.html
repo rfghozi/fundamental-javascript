@@ -1,0 +1,36 @@
+<!-- digunakan untuk set elemen dalam form atau mengambil nilai pada elemen form -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Val</title>
+    <script type="text/javascript" src="jquery-3.5.1.min.js"></script>
+</head>
+
+<body>
+
+    <input type="text" id="inputText" />
+    <div id="hasilText"></div>
+
+    <hr/>
+
+    <input type="radio" class="inputCheckbox" name="pilihan" value="Pilihan 1" />Pilihan 1 <br/>
+    <input type="radio" class="inputCheckbox" name="pilihan" value="Pilihan 2" />Pilihan 2 <br/>
+    <input type="radio" class="inputCheckbox" name="pilihan" value="Pilihan 3" />Pilihan 3 <br/>
+    <div id="hasilCheckbox"></div>
+
+    <script type="text/javascript">
+
+        $(document).ready(function(){
+            $("#inputText").val("xxx aaa");
+
+            $(".inputCheckbox").change(function(){
+                var nilaiCheckbox = $(".inputCheckbox:radio:checked").val();
+                $("#hasilCheckbox").html(nilaiCheckbox);
+            })
+            
+        }); 
+    
+    </script>
+    
+</body>
+</html>
